@@ -74,7 +74,7 @@ var Comments = Backbone.Collection.extend({
    * Setting this gives us some convenience functions, but is not
    * necessary; check out the documentation:
    * http://backbonejs.org/#Collection-model */
-  model: Comment
+  model: Comment///Line 77 Why isn't this an instantiation.  then it was!
 });
 
 /* The reason we want a collection is to track our models.
@@ -83,7 +83,7 @@ var Comments = Backbone.Collection.extend({
  * - count the total number of votes, across all comments
  *
  * That means we need to write a new view: */
-var CommentsView = Backbone.View.extend({
+var CommentsView = Backbone.View.extend({  //same as line 44
   /* Again, we use our initialize function to register listeners.
    * In this case, we want to know when votecounts of the models
    * in our collection changes. */
@@ -110,7 +110,7 @@ var CommentsView = Backbone.View.extend({
     /* Render each model in the collection as a list item (<li>).
      * Remember, we have the underscore functions: */
     this.$el.find('ul').append(this.collection.map(function(comment) {
-      console.log(this.$el.html(html))
+
       // YOUR CODE HERE
     }));
 
