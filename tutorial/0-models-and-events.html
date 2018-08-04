@@ -33,7 +33,12 @@
 * (and other similar frameworks) used to talk about the objects used to
 * store application data.
 */
-var Tweet = Backbone.Model.extend({  
+var Tweet = Backbone.Model.extend({ 
+
+  // initialize: function() {
+  //   console.log('initialized!!!')
+  // }
+
   /* This is just a bare bones Backbone model. No extra special bits to add.
    * Note that Backbone.Model is just another JavaScript class. We use extend
    * to set it up as a normal class instantiator, with the normal
@@ -54,7 +59,7 @@ myTweet.set('message', 'Hello, world!');
 /* Using the reference, get the message attribute of the model and display it:
  * http://backbonejs.org/#Model-get */
 
-// window.alert(YOUR CODE HERE);
+window.alert(myTweet.get('message'));
 
 /* - Backbone EVENTS ----------------------------------------------------------
  * Backbone gives us the ability to listen for events on our models,
