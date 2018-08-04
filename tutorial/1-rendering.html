@@ -102,7 +102,9 @@ var Message = Backbone.Model.extend({
      * all models that are created will have event listeners on them.
      */
      // console.log(this) //SAME AS myTweet.on in the first section
-    this.on(YOUR CODE HERE);
+    this.on('change: message', function(e) {
+      
+    })
     /* It is your turn to write the event handler.
      *
      * Make an event listener that will listen for a `change` in this model's
