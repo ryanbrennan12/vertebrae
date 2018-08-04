@@ -105,6 +105,7 @@ var Message = Backbone.Model.extend({
     this.on('change:message', function(e) {
       
       renderSomethingOnThePage(e.changed.message) ///this is a string that will pop after .set()
+
       // console.log('you changed me!!!!')
     })
     /* It is your turn to write the event handler.
@@ -123,7 +124,7 @@ var Message = Backbone.Model.extend({
    * In the future we will need to be able to alert the message on our model
    * and want to be able to call this function, so we define it on the model.
    */
-  alertThisMessage: function() {
+  alertThisMessage: function() {  //what if this was a function statement???
     /* Note: You will frequently be storing attributes on your models,
      * and the model needs to be aware of these changes,
      * hence the use of getters/setters.
@@ -145,7 +146,9 @@ var Message = Backbone.Model.extend({
 var myNewMessage = new Message();
 
 // ...and then make a change on that model to see it render
-myNewMessage.set({message: 'someMessage'});
+myNewMessage.set({message: 'Angry twitter tweets are boring brah'});
+
+myNewMessage.alertThisMessage()
 
 
 /* Once the model is rendering on the `change` event, move on to step 3!

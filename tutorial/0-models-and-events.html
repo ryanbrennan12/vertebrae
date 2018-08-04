@@ -86,14 +86,14 @@ myTweet.on('change',
     // Let ourselves know that something was changed:
     console.info('Something in this tweet model was changed!');
     console.log(e, 'I am an event handler!!!');
-
+    // window.alert('you changed me forever....maybe')
     // Write code to log the changed attribute:
     console.log('This is the changed part brah!', e.changed);
 
   }
 );
 
-myTweet.set('message', 'all good beb')
+
 /* Backbone works through getters/setters. If you change something on
  * your model as if it were a plain old javascript object,
  * Backbone will not know to fire the change event. */
@@ -104,7 +104,7 @@ myTweet.set('message', 'all good beb')
  * and write a one-liner that will make our `change` listener fire: */
 
 // myTweetYOUR CODE HERE;
-
+myTweet.set('message', 'all good beb')
 /* Once you have the `change` event firing, move on to rendering! */
   </script>
   </body>
